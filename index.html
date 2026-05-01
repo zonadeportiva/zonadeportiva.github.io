@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zona Deportiva | Eventos en vivo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
+}
+
+/* FONDO */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+z-index:-1;
+}
+
+/* CONTENIDO */
+
+.container{
+max-width:700px;
+margin:auto;
+padding:20px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* LOGO */
+
+.logo{
+text-align:center;
+font-size:42px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.logo span{
+color:#e50914;
+}
+
+/* SUB */
+
+.subtitle{
+text-align:center;
+font-size:18px;
+color:#cfcfcf;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(20,20,20,0.92);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:22px;
+padding:25px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+
+.main-image{
+width:100%;
+border-radius:18px;
+margin-bottom:25px;
+}
+
+/* LIVE */
+
+.live-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin-bottom:25px;
+font-size:15px;
+color:#bdbdbd;
+}
+
+.live-dot{
+width:12px;
+height:12px;
+background:#ff0000;
+border-radius:50%;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1;}
+50%{opacity:0.3;}
+100%{opacity:1;}
+}
+
+/* TEXT */
+
+.info{
+font-size:17px;
+line-height:1.9;
+color:#dddddd;
+margin-bottom:25px;
+}
+
+/* SPORTS */
+
+.sports{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:30px;
+}
+
+.sport-item{
+background:#1b1b1b;
+padding:15px;
+border-radius:14px;
+text-align:center;
+font-size:16px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* BUTTON */
+
+.button-area{
+text-align:center;
+margin-top:10px;
+}
+
+.main-button{
+display:inline-block;
+width:100%;
+background:#e50914;
+color:white;
+text-decoration:none;
+padding:20px;
+font-size:24px;
+font-weight:700;
+border-radius:18px;
+transition:0.3s;
+box-shadow:0 8px 25px rgba(229,9,20,0.4);
+}
+
+.main-button:hover{
+transform:scale(1.02);
+background:#ff1f2d;
+}
+
+/* ALERT */
+
+.alert{
+margin-top:25px;
+background:#1d1d1d;
+border-left:4px solid #e50914;
+padding:18px;
+border-radius:12px;
+font-size:15px;
+line-height:1.8;
+color:#cfcfcf;
+}
+
+/* USERS */
+
+.users{
+margin-top:20px;
+text-align:center;
+font-size:15px;
+color:#9e9e9e;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:35px;
+text-align:center;
+font-size:13px;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.logo{
+font-size:34px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.info{
+font-size:16px;
+}
+
+.main-button{
+font-size:22px;
+padding:18px;
+}
+
+.sports{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<div class="logo">
+Zona<span>Deportiva</span>
+</div>
+
+<div class="subtitle">
+Cobertura diaria de encuentros y eventos deportivos disponibles durante el día.
+</div>
+
+<div class="card">
+
+<img class="main-image"
+src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1400&auto=format&fit=crop">
+
+<div class="live-box">
+<div class="live-dot"></div>
+<span>Eventos actualizándose constantemente</span>
+</div>
+
+<div class="info">
+
+Accede a distintos encuentros y competencias deportivas disponibles durante la jornada.
+
+La programación puede variar dependiendo de la disponibilidad de cada evento.
+
+</div>
+
+<div class="sports">
+
+<div class="sport-item">⚽ Fútbol</div>
+
+<div class="sport-item">🏀 Baloncesto</div>
+
+<div class="sport-item">🎾 Tenis</div>
+
+<div class="sport-item">🥊 Deportes</div>
+
+</div>
+
+<div class="button-area">
+
+<a class="main-button"
+href="https://verfutbollibre.github.io/"
+target="_blank">
+
+🔥 INGRESAR A LOS EVENTOS
+
+</a>
+
+</div>
+
+<div class="alert">
+
+⚠ El acceso y disponibilidad de eventos puede cambiar durante el día según la programación deportiva.
+
+</div>
+
+<div class="users">
+👥 +1200 usuarios accediendo hoy
+</div>
+
+</div>
+
+<div class="footer">
+© Zona Deportiva | Cobertura deportiva diaria
+</div>
+
+</div>
+
+</body>
+</html>
